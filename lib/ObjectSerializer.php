@@ -272,12 +272,6 @@ class ObjectSerializer
             return null;
         }
 
-        $replace_me = array('ErrorCode', 'ErrorType', 'CategorizationStatus', 'BankingInterface', 
-        'BankConsent', 'BankConsentStatus',  'Bank', 'BankInterfaceProperty', 'BankGroup' );
-        if(in_array($class, $replace_me)) {
-            $class = "\OpenAPIAccess\Client\Model\\$class";
-        }
-
         if (strcasecmp(substr($class, -2), '[]') === 0) {
             $data = is_string($data) ? json_decode($data) : $data;
 
@@ -339,6 +333,11 @@ class ObjectSerializer
         if (in_array($class, ['DateTime', 'array', 'bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'number', 'object', 'string', 'void'], true)) {
             settype($data, $class);
             return $data;
+        }
+
+        //Omer SALAJ was here!
+        if(strpos($class, 'OpenAPIWebForm\Client\Model') === false && $class !== '\SplFileObject') {
+            $class = "\OpenAPIWebForm\Client\Model\\$class";
         }
 
         if ($class === '\SplFileObject') {
