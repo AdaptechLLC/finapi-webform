@@ -1,6 +1,6 @@
 # OpenAPIClient-php
 
-The following pages give you some general information on how to use our APIs.<br>The actual API services documentation then follows further below. You can use the menu to jump between API sections.<br><br>This page has a built-in HTTP(S) client, so you can test the services directly from within this page, by filling in the request parameters and/or body in the respective services, and then hitting the TRY button. Note that you need to be authorized to make a successful API call. To authorize, refer to the '<a target=\"_blank\" href=\"https://docs.finapi.io/?product=access#tag--Authorization\">Authorization</a>' section of Access, or in case you already have a valid user token, just use the QUICK AUTH on the left.<br>Please also remember that all user management functions should be looked up in <a target=\"_blank\" href=\"https://docs.finapi.io/?product=access\">Access</a>.<br><br>You should also check out the <a href=\"https://finapi.zendesk.com/hc/en-us\">Developer Portal</a> for more information. If you need any help with the API, contact <a href=\"mailto:support@finapi.io\">support@finapi.io</a>.
+The following pages give you some general information on how to use our APIs.<br/>The actual API services documentation then follows further below. You can use the menu to jump between API sections.<br/><br/>This page has a built-in HTTP(S) client, so you can test the services directly from within this page, by filling in the request parameters and/or body in the respective services, and then hitting the TRY button. Note that you need to be authorized to make a successful API call. To authorize, refer to the '<a target=\"_blank\" href=\"https://docs.finapi.io/?product=access#tag--Authorization\">Authorization</a>' section of Access, or in case you already have a valid user token, just use the QUICK AUTH on the left.<br/>Please also remember that all user management functions should be looked up in <a target=\"_blank\" href=\"https://docs.finapi.io/?product=access\">Access</a>.<br/><br/>You should also check out the <a href=\"https://finapi.zendesk.com/hc/en-us\">Developer Portal</a> for more information. If you need any help with the API, contact <a href=\"mailto:support@finapi.io\">support@finapi.io</a>.
 
 
 ## Installation & Usage
@@ -80,13 +80,14 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AccountInformationServicesApi* | [**createForBankConnectionImport**](docs/Api/AccountInformationServicesApi.md#createforbankconnectionimport) | **POST** /api/webForms/bankConnectionImport | Import a bank connection
 *AccountInformationServicesApi* | [**createForBankConnectionUpdate**](docs/Api/AccountInformationServicesApi.md#createforbankconnectionupdate) | **POST** /api/webForms/bankConnectionUpdate | Update a bank connection (BETA)
+*PaymentInitiationServicesApi* | [**createForDirectDebitWithAccountId**](docs/Api/PaymentInitiationServicesApi.md#createfordirectdebitwithaccountid) | **POST** /api/webForms/directDebitWithAccountId | Create a direct debit with account ID
 *PaymentInitiationServicesApi* | [**createForPaymentWithAccountId**](docs/Api/PaymentInitiationServicesApi.md#createforpaymentwithaccountid) | **POST** /api/webForms/paymentWithAccountId | Create a payment with account ID
 *PaymentInitiationServicesApi* | [**createForStandalonePayment**](docs/Api/PaymentInitiationServicesApi.md#createforstandalonepayment) | **POST** /api/webForms/standalonePayment | Create a standalone payment
-*ProfilesApi* | [**createProfile**](docs/Api/ProfilesApi.md#createprofile) | **POST** /api/profiles | Create a profile (BETA)
+*ProfilesApi* | [**createProfile**](docs/Api/ProfilesApi.md#createprofile) | **POST** /api/profiles | Create a profile
 *ProfilesApi* | [**deleteProfile**](docs/Api/ProfilesApi.md#deleteprofile) | **DELETE** /api/profiles/{id} | Delete a profile
-*ProfilesApi* | [**editProfile**](docs/Api/ProfilesApi.md#editprofile) | **PATCH** /api/profiles/{id} | Edit a profile (BETA)
-*ProfilesApi* | [**getProfile**](docs/Api/ProfilesApi.md#getprofile) | **GET** /api/profiles/{id} | Get a profile (BETA)
-*ProfilesApi* | [**getProfiles**](docs/Api/ProfilesApi.md#getprofiles) | **GET** /api/profiles | Get profiles (BETA)
+*ProfilesApi* | [**editProfile**](docs/Api/ProfilesApi.md#editprofile) | **PATCH** /api/profiles/{id} | Edit a profile
+*ProfilesApi* | [**getProfile**](docs/Api/ProfilesApi.md#getprofile) | **GET** /api/profiles/{id} | Get a profile
+*ProfilesApi* | [**getProfiles**](docs/Api/ProfilesApi.md#getprofiles) | **GET** /api/profiles | Get profiles
 *WebFormsApi* | [**deleteWebForm**](docs/Api/WebFormsApi.md#deletewebform) | **DELETE** /api/webForms/{id} | Delete a web form
 *WebFormsApi* | [**getWebForm**](docs/Api/WebFormsApi.md#getwebform) | **GET** /api/webForms | Get web forms
 *WebFormsApi* | [**getWebForms**](docs/Api/WebFormsApi.md#getwebforms) | **GET** /api/webForms/{id} | Get a web form
@@ -101,6 +102,9 @@ Class | Method | HTTP request | Description
 - [Callbacks](docs/Model/Callbacks.md)
 - [Color](docs/Model/Color.md)
 - [CreateProfileDetails](docs/Model/CreateProfileDetails.md)
+- [DirectDebitOrder](docs/Model/DirectDebitOrder.md)
+- [DirectDebitWithAccountDetails](docs/Model/DirectDebitWithAccountDetails.md)
+- [DirectDebitWithAccountReceiver](docs/Model/DirectDebitWithAccountReceiver.md)
 - [EditProfileDetails](docs/Model/EditProfileDetails.md)
 - [Error](docs/Model/Error.md)
 - [Functionality](docs/Model/Functionality.md)
@@ -110,6 +114,7 @@ Class | Method | HTTP request | Description
 - [Paging](docs/Model/Paging.md)
 - [Payload](docs/Model/Payload.md)
 - [PaymentOrder](docs/Model/PaymentOrder.md)
+- [PaymentPayer](docs/Model/PaymentPayer.md)
 - [PaymentRecipient](docs/Model/PaymentRecipient.md)
 - [PaymentWithAccountDetails](docs/Model/PaymentWithAccountDetails.md)
 - [PaymentWithAccountSender](docs/Model/PaymentWithAccountSender.md)
@@ -151,5 +156,5 @@ vendor/bin/phpunit
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `2.92.0`
+- API version: `2.161.4`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

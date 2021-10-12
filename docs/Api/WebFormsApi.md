@@ -17,7 +17,7 @@ deleteWebForm($id)
 
 Delete a web form
 
-Delete a web form of the user that is authorized by the access token.<br>Must pass the user's access token.
+Delete a web form of the user that is authorized by the access token.<br/><br/>Must pass the user's access token.
 
 ### Example
 
@@ -78,7 +78,7 @@ getWebForm($page, $per_page): \OpenAPIWebForm\Client\Model\WebFormsPage
 
 Get web forms
 
-Get all web forms associated with the authorized user.<br>Must pass the user's access token.
+Get all web forms associated with the authorized user.<br/><br/>Must pass the user's access token.
 
 ### Example
 
@@ -142,7 +142,7 @@ getWebForms($id): \OpenAPIWebForm\Client\Model\WebForm
 
 Get a web form
 
-Get a web form of the authorized user.<br>Must pass the user's access token.
+Get a web form of the authorized user.<br/><br/>Must pass the user's access token.
 
 ### Example
 

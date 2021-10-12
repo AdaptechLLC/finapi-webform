@@ -4,11 +4,11 @@ All URIs are relative to https://webform-sandbox.finapi.io.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createProfile()**](ProfilesApi.md#createProfile) | **POST** /api/profiles | Create a profile (BETA)
+[**createProfile()**](ProfilesApi.md#createProfile) | **POST** /api/profiles | Create a profile
 [**deleteProfile()**](ProfilesApi.md#deleteProfile) | **DELETE** /api/profiles/{id} | Delete a profile
-[**editProfile()**](ProfilesApi.md#editProfile) | **PATCH** /api/profiles/{id} | Edit a profile (BETA)
-[**getProfile()**](ProfilesApi.md#getProfile) | **GET** /api/profiles/{id} | Get a profile (BETA)
-[**getProfiles()**](ProfilesApi.md#getProfiles) | **GET** /api/profiles | Get profiles (BETA)
+[**editProfile()**](ProfilesApi.md#editProfile) | **PATCH** /api/profiles/{id} | Edit a profile
+[**getProfile()**](ProfilesApi.md#getProfile) | **GET** /api/profiles/{id} | Get a profile
+[**getProfiles()**](ProfilesApi.md#getProfiles) | **GET** /api/profiles | Get profiles
 
 
 ## `createProfile()`
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 createProfile($create_profile_details): \OpenAPIWebForm\Client\Model\Profile
 ```
 
-Create a profile (BETA)
+Create a profile
 
 The end point provides a list of parameters which customers can personalize to be in line with their brand's styling.<br/>The end point triggered with a list of values, will create a profile with a unique <code>profileId</code>. When the customer passes the <code>profileId</code> on an API call, the values from the profile are applied on the web form while rendering to end-users. We welcome customers to set up a default profile, so that they do not need to pass the <code>profileId</code> as a parameter for every API call.<br/><br/>In case the API request is syntactically correct, the service will respond with HTTP return code 201 and a profile object.<br/><br/>Must pass the <a href='https://finapi.zendesk.com/hc/en-us/articles/115003661827-Difference-between-app-clients-and-mandator-admin-client' target='_blank'>mandator admin client</a>'s access_token.
 
@@ -81,7 +81,7 @@ deleteProfile($id)
 
 Delete a profile
 
-Delete a single profile by its id.<br/>Must pass the <a href='https://finapi.zendesk.com/hc/en-us/articles/115003661827-Difference-between-app-clients-and-mandator-admin-client' target='_blank'>mandator admin client</a>'s access_token.
+Delete a single profile by its id.<br/><br/>Must pass the <a href='https://finapi.zendesk.com/hc/en-us/articles/115003661827-Difference-between-app-clients-and-mandator-admin-client' target='_blank'>mandator admin client</a>'s access_token.
 
 ### Example
 
@@ -140,9 +140,9 @@ void (empty response body)
 editProfile($id, $edit_profile_details): \OpenAPIWebForm\Client\Model\Profile
 ```
 
-Edit a profile (BETA)
+Edit a profile
 
-Edit a single profile by its id.<br/>Must pass the <a href='https://finapi.zendesk.com/hc/en-us/articles/115003661827-Difference-between-app-clients-and-mandator-admin-client' target='_blank'>mandator admin client</a>'s access_token.
+Edit a single profile by its id.<br/><br/>Must pass the <a href='https://finapi.zendesk.com/hc/en-us/articles/115003661827-Difference-between-app-clients-and-mandator-admin-client' target='_blank'>mandator admin client</a>'s access_token.
 
 ### Example
 
@@ -204,9 +204,9 @@ Name | Type | Description  | Notes
 getProfile($id): \OpenAPIWebForm\Client\Model\Profile
 ```
 
-Get a profile (BETA)
+Get a profile
 
-Get a single profile by its id.<br/>Must pass the <a href='https://finapi.zendesk.com/hc/en-us/articles/115003661827-Difference-between-app-clients-and-mandator-admin-client' target='_blank'>mandator admin client</a>'s access_token.
+Get a single profile by its id.<br/><br/>Must pass the <a href='https://finapi.zendesk.com/hc/en-us/articles/115003661827-Difference-between-app-clients-and-mandator-admin-client' target='_blank'>mandator admin client</a>'s access_token.
 
 ### Example
 
@@ -266,9 +266,9 @@ Name | Type | Description  | Notes
 getProfiles($page, $per_page): \OpenAPIWebForm\Client\Model\ProfilesPage
 ```
 
-Get profiles (BETA)
+Get profiles
 
-Get all profiles.<br/>Must pass the <a href='https://finapi.zendesk.com/hc/en-us/articles/115003661827-Difference-between-app-clients-and-mandator-admin-client' target='_blank'>mandator admin client</a>'s access_token.
+Get all profiles.<br/><br/>Must pass the <a href='https://finapi.zendesk.com/hc/en-us/articles/115003661827-Difference-between-app-clients-and-mandator-admin-client' target='_blank'>mandator admin client</a>'s access_token.
 
 ### Example
 

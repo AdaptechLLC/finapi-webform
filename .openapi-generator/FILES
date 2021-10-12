@@ -16,6 +16,9 @@ docs/Model/Brand.md
 docs/Model/Callbacks.md
 docs/Model/Color.md
 docs/Model/CreateProfileDetails.md
+docs/Model/DirectDebitOrder.md
+docs/Model/DirectDebitWithAccountDetails.md
+docs/Model/DirectDebitWithAccountReceiver.md
 docs/Model/EditProfileDetails.md
 docs/Model/Error.md
 docs/Model/Functionality.md
@@ -25,6 +28,7 @@ docs/Model/Language.md
 docs/Model/Paging.md
 docs/Model/Payload.md
 docs/Model/PaymentOrder.md
+docs/Model/PaymentPayer.md
 docs/Model/PaymentRecipient.md
 docs/Model/PaymentWithAccountDetails.md
 docs/Model/PaymentWithAccountSender.md
@@ -55,6 +59,9 @@ lib/Model/Brand.php
 lib/Model/Callbacks.php
 lib/Model/Color.php
 lib/Model/CreateProfileDetails.php
+lib/Model/DirectDebitOrder.php
+lib/Model/DirectDebitWithAccountDetails.php
+lib/Model/DirectDebitWithAccountReceiver.php
 lib/Model/EditProfileDetails.php
 lib/Model/Error.php
 lib/Model/Functionality.php
@@ -65,6 +72,7 @@ lib/Model/ModelInterface.php
 lib/Model/Paging.php
 lib/Model/Payload.php
 lib/Model/PaymentOrder.php
+lib/Model/PaymentPayer.php
 lib/Model/PaymentRecipient.php
 lib/Model/PaymentWithAccountDetails.php
 lib/Model/PaymentWithAccountSender.php
@@ -93,6 +101,9 @@ test/Model/BrandTest.php
 test/Model/CallbacksTest.php
 test/Model/ColorTest.php
 test/Model/CreateProfileDetailsTest.php
+test/Model/DirectDebitOrderTest.php
+test/Model/DirectDebitWithAccountDetailsTest.php
+test/Model/DirectDebitWithAccountReceiverTest.php
 test/Model/EditProfileDetailsTest.php
 test/Model/ErrorTest.php
 test/Model/FunctionalityTest.php
@@ -102,6 +113,7 @@ test/Model/LanguageTest.php
 test/Model/PagingTest.php
 test/Model/PayloadTest.php
 test/Model/PaymentOrderTest.php
+test/Model/PaymentPayerTest.php
 test/Model/PaymentRecipientTest.php
 test/Model/PaymentWithAccountDetailsTest.php
 test/Model/PaymentWithAccountSenderTest.php
