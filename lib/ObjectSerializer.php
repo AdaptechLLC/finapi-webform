@@ -339,9 +339,9 @@ class ObjectSerializer
         }
 
         //Omer SALAJ was here!
-        //if(strpos($class, 'OpenAPIWebForm\Client\Model') === false && $class !== '\SplFileObject') {
-        //    $class = "\OpenAPIWebForm\Client\Model\\$class";
-        //}
+        if(strpos($class, 'OpenAPIWebForm\Client\Model') === false && $class !== '\SplFileObject') {
+            $class = "\OpenAPIWebForm\Client\Model\\$class";
+        }
 
         if ($class === '\SplFileObject') {
             /** @var \Psr\Http\Message\StreamInterface $data */
