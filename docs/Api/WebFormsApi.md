@@ -1,12 +1,12 @@
 # OpenAPIWebForm\Client\WebFormsApi
 
-All URIs are relative to https://webform-sandbox.finapi.io.
+All URIs are relative to https://webform-live.finapi.io.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**deleteWebForm()**](WebFormsApi.md#deleteWebForm) | **DELETE** /api/webForms/{id} | Delete a web form
-[**getWebForm()**](WebFormsApi.md#getWebForm) | **GET** /api/webForms | Get web forms
-[**getWebForms()**](WebFormsApi.md#getWebForms) | **GET** /api/webForms/{id} | Get a web form
+[**getWebForm()**](WebFormsApi.md#getWebForm) | **GET** /api/webForms/{id} | Get a web form
+[**getWebForms()**](WebFormsApi.md#getWebForms) | **GET** /api/webForms | Get web forms
 
 
 ## `deleteWebForm()`
@@ -26,10 +26,8 @@ Delete a web form of the user that is authorized by the access token.<br/><br/>M
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: UserAccessToken
-$config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// Configure OAuth2 access token for authorization: BearerAccessToken
+$config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new OpenAPIWebForm\Client\Api\WebFormsApi(
@@ -59,7 +57,7 @@ void (empty response body)
 
 ### Authorization
 
-[UserAccessToken](../../README.md#UserAccessToken)
+[BearerAccessToken](../../README.md#BearerAccessToken)
 
 ### HTTP request headers
 
@@ -73,71 +71,7 @@ void (empty response body)
 ## `getWebForm()`
 
 ```php
-getWebForm($page, $per_page): \OpenAPIWebForm\Client\Model\WebFormsPage
-```
-
-Get web forms
-
-Get all web forms associated with the authorized user.<br/><br/>Must pass the user's access token.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure API key authorization: UserAccessToken
-$config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-
-$apiInstance = new OpenAPIWebForm\Client\Api\WebFormsApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$page = 1; // int | Page to load
-$per_page = 20; // int | The number of items on the page
-
-try {
-    $result = $apiInstance->getWebForm($page, $per_page);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling WebFormsApi->getWebForm: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **int**| Page to load | [optional] [default to 1]
- **per_page** | **int**| The number of items on the page | [optional] [default to 20]
-
-### Return type
-
-[**\OpenAPIWebForm\Client\Model\WebFormsPage**](../Model/WebFormsPage.md)
-
-### Authorization
-
-[UserAccessToken](../../README.md#UserAccessToken)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `getWebForms()`
-
-```php
-getWebForms($id): \OpenAPIWebForm\Client\Model\WebForm
+getWebForm($id): \OpenAPIWebForm\Client\Model\WebForm
 ```
 
 Get a web form
@@ -151,10 +85,8 @@ Get a web form of the authorized user.<br/><br/>Must pass the user's access toke
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: UserAccessToken
-$config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// Configure OAuth2 access token for authorization: BearerAccessToken
+$config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new OpenAPIWebForm\Client\Api\WebFormsApi(
@@ -166,10 +98,10 @@ $apiInstance = new OpenAPIWebForm\Client\Api\WebFormsApi(
 $id = 'id_example'; // string | Identifier of the web form
 
 try {
-    $result = $apiInstance->getWebForms($id);
+    $result = $apiInstance->getWebForm($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WebFormsApi->getWebForms: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling WebFormsApi->getWebForm: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -185,7 +117,71 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserAccessToken](../../README.md#UserAccessToken)
+[BearerAccessToken](../../README.md#BearerAccessToken)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getWebForms()`
+
+```php
+getWebForms($order, $page, $per_page): \OpenAPIWebForm\Client\Model\WebFormsPage
+```
+
+Get web forms
+
+Get all web forms associated with the authorized user.<br/><br/>Must pass the user's access token.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: BearerAccessToken
+$config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPIWebForm\Client\Api\WebFormsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$order = createdAt,desc; // string | Determines the order of the results. You can order by <code>createdAt</code> field ascending or descending. The general format is <code>property[,asc|desc]</code>, with <code>asc</code> being the default value.The default order is <code>createdAt,asc</code>.
+$page = 1; // int | Page to load
+$per_page = 20; // int | The number of items on the page
+
+try {
+    $result = $apiInstance->getWebForms($order, $page, $per_page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WebFormsApi->getWebForms: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **order** | **string**| Determines the order of the results. You can order by &lt;code&gt;createdAt&lt;/code&gt; field ascending or descending. The general format is &lt;code&gt;property[,asc|desc]&lt;/code&gt;, with &lt;code&gt;asc&lt;/code&gt; being the default value.The default order is &lt;code&gt;createdAt,asc&lt;/code&gt;. | [optional]
+ **page** | **int**| Page to load | [optional] [default to 1]
+ **per_page** | **int**| The number of items on the page | [optional] [default to 20]
+
+### Return type
+
+[**\OpenAPIWebForm\Client\Model\WebFormsPage**](../Model/WebFormsPage.md)
+
+### Authorization
+
+[BearerAccessToken](../../README.md#BearerAccessToken)
 
 ### HTTP request headers
 

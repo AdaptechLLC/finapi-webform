@@ -1,6 +1,6 @@
 # OpenAPIWebForm\Client\ProfilesApi
 
-All URIs are relative to https://webform-sandbox.finapi.io.
+All URIs are relative to https://webform-live.finapi.io.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,7 +19,7 @@ createProfile($create_profile_details): \OpenAPIWebForm\Client\Model\Profile
 
 Create a profile
 
-The end point provides a list of parameters which customers can personalize to be in line with their brand's styling.<br/>The end point triggered with a list of values, will create a profile with a unique <code>profileId</code>. When the customer passes the <code>profileId</code> on an API call, the values from the profile are applied on the web form while rendering to end-users. We welcome customers to set up a default profile, so that they do not need to pass the <code>profileId</code> as a parameter for every API call.<br/><br/>In case the API request is syntactically correct, the service will respond with HTTP return code 201 and a profile object.<br/><br/>Must pass the <a href='https://finapi.zendesk.com/hc/en-us/articles/115003661827-Difference-between-app-clients-and-mandator-admin-client' target='_blank'>mandator admin client</a>'s access_token.
+The end point provides a list of parameters which customers can personalize to be in line with their brand's styling.<br/>The end point triggered with a list of values, will create a profile with a unique <code>profileId</code>. When the customer passes the <code>profileId</code> on an API call, the values from the profile are applied on the web form while rendering to end-users. We welcome customers to set up a default profile, so that they do not need to pass the <code>profileId</code> as a parameter for every API call.<br/><br/>In case the API request is syntactically correct, the service will respond with HTTP return code 201 and a profile object.<br/><br/>Must pass the <a href='https://documentation.finapi.io/access/Application-management.2763423767.html' target='_blank'>mandator admin client</a>'s access_token.
 
 ### Example
 
@@ -28,10 +28,8 @@ The end point provides a list of parameters which customers can personalize to b
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: UserAccessToken
-$config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// Configure OAuth2 access token for authorization: BearerAccessToken
+$config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new OpenAPIWebForm\Client\Api\ProfilesApi(
@@ -62,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserAccessToken](../../README.md#UserAccessToken)
+[BearerAccessToken](../../README.md#BearerAccessToken)
 
 ### HTTP request headers
 
@@ -81,7 +79,7 @@ deleteProfile($id)
 
 Delete a profile
 
-Delete a single profile by its id.<br/><br/>Must pass the <a href='https://finapi.zendesk.com/hc/en-us/articles/115003661827-Difference-between-app-clients-and-mandator-admin-client' target='_blank'>mandator admin client</a>'s access_token.
+Delete a single profile by its id.<br/><br/>Must pass the <a href='https://documentation.finapi.io/access/Application-management.2763423767.html' target='_blank'>mandator admin client</a>'s access_token.
 
 ### Example
 
@@ -90,10 +88,8 @@ Delete a single profile by its id.<br/><br/>Must pass the <a href='https://finap
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: UserAccessToken
-$config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// Configure OAuth2 access token for authorization: BearerAccessToken
+$config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new OpenAPIWebForm\Client\Api\ProfilesApi(
@@ -123,7 +119,7 @@ void (empty response body)
 
 ### Authorization
 
-[UserAccessToken](../../README.md#UserAccessToken)
+[BearerAccessToken](../../README.md#BearerAccessToken)
 
 ### HTTP request headers
 
@@ -142,7 +138,7 @@ editProfile($id, $edit_profile_details): \OpenAPIWebForm\Client\Model\Profile
 
 Edit a profile
 
-Edit a single profile by its id.<br/><br/>Must pass the <a href='https://finapi.zendesk.com/hc/en-us/articles/115003661827-Difference-between-app-clients-and-mandator-admin-client' target='_blank'>mandator admin client</a>'s access_token.
+Edit a single profile by its id.<br/><br/>Must pass the <a href='https://documentation.finapi.io/access/Application-management.2763423767.html' target='_blank'>mandator admin client</a>'s access_token.
 
 ### Example
 
@@ -151,10 +147,8 @@ Edit a single profile by its id.<br/><br/>Must pass the <a href='https://finapi.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: UserAccessToken
-$config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// Configure OAuth2 access token for authorization: BearerAccessToken
+$config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new OpenAPIWebForm\Client\Api\ProfilesApi(
@@ -187,7 +181,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserAccessToken](../../README.md#UserAccessToken)
+[BearerAccessToken](../../README.md#BearerAccessToken)
 
 ### HTTP request headers
 
@@ -206,7 +200,7 @@ getProfile($id): \OpenAPIWebForm\Client\Model\Profile
 
 Get a profile
 
-Get a single profile by its id.<br/><br/>Must pass the <a href='https://finapi.zendesk.com/hc/en-us/articles/115003661827-Difference-between-app-clients-and-mandator-admin-client' target='_blank'>mandator admin client</a>'s access_token.
+Get a single profile by its id.<br/><br/>Must pass the <a href='https://documentation.finapi.io/access/Application-management.2763423767.html' target='_blank'>mandator admin client</a>'s access_token.
 
 ### Example
 
@@ -215,10 +209,8 @@ Get a single profile by its id.<br/><br/>Must pass the <a href='https://finapi.z
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: UserAccessToken
-$config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// Configure OAuth2 access token for authorization: BearerAccessToken
+$config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new OpenAPIWebForm\Client\Api\ProfilesApi(
@@ -249,7 +241,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserAccessToken](../../README.md#UserAccessToken)
+[BearerAccessToken](../../README.md#BearerAccessToken)
 
 ### HTTP request headers
 
@@ -263,12 +255,12 @@ Name | Type | Description  | Notes
 ## `getProfiles()`
 
 ```php
-getProfiles($page, $per_page): \OpenAPIWebForm\Client\Model\ProfilesPage
+getProfiles($order, $page, $per_page): \OpenAPIWebForm\Client\Model\ProfilesPage
 ```
 
 Get profiles
 
-Get all profiles.<br/><br/>Must pass the <a href='https://finapi.zendesk.com/hc/en-us/articles/115003661827-Difference-between-app-clients-and-mandator-admin-client' target='_blank'>mandator admin client</a>'s access_token.
+Get all profiles.<br/><br/>Must pass the <a href='https://documentation.finapi.io/access/Application-management.2763423767.html' target='_blank'>mandator admin client</a>'s access_token.
 
 ### Example
 
@@ -277,10 +269,8 @@ Get all profiles.<br/><br/>Must pass the <a href='https://finapi.zendesk.com/hc/
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: UserAccessToken
-$config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// Configure OAuth2 access token for authorization: BearerAccessToken
+$config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new OpenAPIWebForm\Client\Api\ProfilesApi(
@@ -289,11 +279,12 @@ $apiInstance = new OpenAPIWebForm\Client\Api\ProfilesApi(
     new GuzzleHttp\Client(),
     $config
 );
+$order = createdAt,desc; // string | Determines the order of the results. You can order by <code>createdAt</code> field ascending or descending. The general format is <code>property[,asc|desc]</code>, with <code>asc</code> being the default value.The default order is <code>createdAt,asc</code>.
 $page = 1; // int | Page to load
 $per_page = 20; // int | The number of items on the page
 
 try {
-    $result = $apiInstance->getProfiles($page, $per_page);
+    $result = $apiInstance->getProfiles($order, $page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProfilesApi->getProfiles: ', $e->getMessage(), PHP_EOL;
@@ -304,6 +295,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **order** | **string**| Determines the order of the results. You can order by &lt;code&gt;createdAt&lt;/code&gt; field ascending or descending. The general format is &lt;code&gt;property[,asc|desc]&lt;/code&gt;, with &lt;code&gt;asc&lt;/code&gt; being the default value.The default order is &lt;code&gt;createdAt,asc&lt;/code&gt;. | [optional]
  **page** | **int**| Page to load | [optional] [default to 1]
  **per_page** | **int**| The number of items on the page | [optional] [default to 20]
 
@@ -313,7 +305,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserAccessToken](../../README.md#UserAccessToken)
+[BearerAccessToken](../../README.md#BearerAccessToken)
 
 ### HTTP request headers
 

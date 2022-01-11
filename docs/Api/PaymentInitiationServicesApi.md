@@ -1,6 +1,6 @@
 # OpenAPIWebForm\Client\PaymentInitiationServicesApi
 
-All URIs are relative to https://webform-sandbox.finapi.io.
+All URIs are relative to https://webform-live.finapi.io.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -26,10 +26,8 @@ Initiates a direct debit from a specific account using an account ID. A pre-requ
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: UserAccessToken
-$config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// Configure OAuth2 access token for authorization: BearerAccessToken
+$config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new OpenAPIWebForm\Client\Api\PaymentInitiationServicesApi(
@@ -60,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserAccessToken](../../README.md#UserAccessToken)
+[BearerAccessToken](../../README.md#BearerAccessToken)
 
 ### HTTP request headers
 
@@ -88,10 +86,8 @@ Initiates payment from a specific checking account using an account ID. A pre-re
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: UserAccessToken
-$config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// Configure OAuth2 access token for authorization: BearerAccessToken
+$config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new OpenAPIWebForm\Client\Api\PaymentInitiationServicesApi(
@@ -122,7 +118,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserAccessToken](../../README.md#UserAccessToken)
+[BearerAccessToken](../../README.md#BearerAccessToken)
 
 ### HTTP request headers
 
@@ -141,7 +137,7 @@ createForStandalonePayment($standalone_payment_details): \OpenAPIWebForm\Client\
 
 Create a standalone payment
 
-Initiates a payment from a specific checking account. If you don't need end users to connect their account and download their bank data to our database before requesting payment initiation, then this is the service to use. Ideal for use cases that need one-time payment initiation.<br/><br/>In case the API request is syntactically correct, the service will respond with HTTP return code 201 and a unique URL. You must direct your user to our web form with the URL.<br/><br/>Must pass the user's access token.
+Initiates a payment from a specific checking account. If you don't need end users to connect their account and download their bank data to our database before requesting payment initiation, then this is the service to use. Ideal for use cases that need one-time payment initiation.<br/><br/>In order to test the API, you can initiate a payment with our Demo banks. For more details, please see the associated <a href='https://documentation.finapi.io/access/finAPI-Test-Banks.2556264541.html' target='_blank'>documentation</a>.<br/><br/>In case the API request is syntactically correct, the service will respond with HTTP return code 201 and a unique URL. You must direct your user to our web form with the URL.<br/><br/>Must pass the user's access token.
 
 ### Example
 
@@ -150,10 +146,8 @@ Initiates a payment from a specific checking account. If you don't need end user
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: UserAccessToken
-$config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// Configure OAuth2 access token for authorization: BearerAccessToken
+$config = OpenAPIWebForm\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new OpenAPIWebForm\Client\Api\PaymentInitiationServicesApi(
@@ -184,7 +178,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserAccessToken](../../README.md#UserAccessToken)
+[BearerAccessToken](../../README.md#BearerAccessToken)
 
 ### HTTP request headers
 
